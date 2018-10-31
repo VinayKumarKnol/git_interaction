@@ -5,9 +5,7 @@ def parse_args():
     parser.add_argument('-c', '--config', type=str, required=True,
                         help='location of credentials file.',
                         default='/credentials/oauth.json')
-    parser.add_argument('-tc', '--template_conf', type=str, required=True,
-                        help='Jinja2 template file for config')
-    parser.add_argument('-u', '--dcos_cluster_name', type=str, required=True,
-                        help='Cluster where these visualisations are needed')
+    parser.add_argument('-f', '--file', type=str, required=True,
+                        help='file to put as a gist')
     args = parser.parse_args()
     return args
